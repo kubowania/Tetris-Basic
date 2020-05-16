@@ -43,4 +43,4 @@ This course consists of explainer videos that will run you through concepts such
 ### Who this course is for:
 * For complete beginners curious about JavaScript
 
-When you have finished your project I would love for you to share it with me - you can find me on [YouTube](https://www.youtube.com/channel/UC5DNytAJ6_FISueUfzZCVsw)  or (Twitter)(https://www.tiwtter.comnm/ania_kubow). 
+When you have finished your project I would love for you to share it with me - you can find me on [YouTube](https://www.youtube.com/channel/UC5DNytAJ6_FISueUfzZCVsw)  or (Twitter)(https://www.twitter.comnm/ania_kubow). 
