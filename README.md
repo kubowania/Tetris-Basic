@@ -1,5 +1,5 @@
 # Tetris-Basic
-This is a simple no nonsense version of Tetris that has no styling - made for the support of my Udemy Video. 
+This is a simple no nonsense version of Tetris that has no styling - made for the support of my Udemy Video.  Also viewable [here](https://youtu.be/w1JJfK09ujQ)
 
 
 In this course, you will learn how to set up a project from scratch using the Atom code editor and your command prompt tool, as well as gain a fundamental understanding of JavaScript by building your very own version of Tetris.
@@ -43,4 +43,5 @@ This course consists of explainer videos that will run you through concepts such
 ### Who this course is for:
 * For complete beginners curious about JavaScript
 
-When you have finished your project I would love for you to share it with me - you can find me on [YouTube](https://www.youtube.com/channel/UC5DNytAJ6_FISueUfzZCVsw)  or (Twitter)(https://twitter.com/ania_kubow). 
+When you have finished your project I would love for you to share it with me - you can find me on [YouTube](https://www.youtube.com/channel/UC5DNytAJ6_FISueUfzZCVsw)  or [Twitter](https://www.twitter.com/ania_kubow). 
+
