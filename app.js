@@ -245,7 +245,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function gameOver() {
     if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
       scoreDisplay.innerHTML = 'end'
-      clearInterval(timerId)
+      clearInterval(timerId);
+      document.removeEventListener("keyup",control);  //stops to click on any key
     }
   }
 
