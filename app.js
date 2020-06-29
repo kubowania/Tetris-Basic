@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
     [0, displayWidth, displayWidth+1, displayWidth*2+1], //zTetromino
     [1, displayWidth, displayWidth+1, displayWidth+2], //tTetromino
     [0, 1, displayWidth, displayWidth+1], //oTetromino
-    [1, displayWidth+1, displayWidth*2+1, displayWidth*3+1] //iTetromino
+    [1, displayWidth+1, displayWidth*2+1, displayWidth*3+1], //iTetromino
     [1, 2, displayWidth+2, displayWidth*2+2],                // liTetromino
     [1, displayWidth, displayWidth+1, displayWidth*2]        // ziTetromino    
   ]
