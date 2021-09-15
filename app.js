@@ -75,12 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
     current.forEach(index => {
       squares[currentPosition + index].classList.remove('tetromino')
       squares[currentPosition + index].style.backgroundColor = ''
-
     })
   }
 
   //assign functions to keyCodes
   function control(e) {
+    console.log("here");
     if(e.keyCode === 37) {
       moveLeft()
     } else if (e.keyCode === 38) {
@@ -91,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
       moveDown()
     }
   }
-  document.addEventListener('keyup', control)
 
   //move down function
   function moveDown() {
@@ -207,19 +206,34 @@ document.addEventListener('DOMContentLoaded', () => {
       displaySquares[displayIndex + index].style.backgroundColor = colors[nextRandom]
     })
   }
-
+  function restart()
+  {
+      for (let index = 0; index < squares.length; index++) {
+        squares[index].classList.remove('tetromino')
+        if(index < (squares.length - 10)){
+        squares[index].classList.remove('taken')
+        }
+        squares[index].style.backgroundColor = ''
+        scoreDisplay.innerHTML =0;
+      }
+      random = Math.floor(Math.random()*theTetrominoes.length)
+      current = theTetrominoes[random][currentRotation]
+  }
+  function strtGame(){
+     
+      if (timerId) {
+        restart()
+        timerId=null
+      } else {
+        document.addEventListener('keyup', control)
+        draw()
+        timerId = setInterval(moveDown, 1000)
+        nextRandom = Math.floor(Math.random()*theTetrominoes.length)
+        displayShape()
+     }  
+   }
   //add functionality to the button
-  startBtn.addEventListener('click', () => {
-    if (timerId) {
-      clearInterval(timerId)
-      timerId = null
-    } else {
-      draw()
-      timerId = setInterval(moveDown, 1000)
-      nextRandom = Math.floor(Math.random()*theTetrominoes.length)
-      displayShape()
-    }
-  })
+  startBtn.addEventListener('click', strtGame)
 
   //add score
   function addScore() {
@@ -244,8 +258,9 @@ document.addEventListener('DOMContentLoaded', () => {
   //game over
   function gameOver() {
     if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
-      scoreDisplay.innerHTML = 'end'
+      scoreDisplay.innerHTML += '    game end'
       clearInterval(timerId)
+      document.removeEventListener('keyup',control);
     }
   }
 
